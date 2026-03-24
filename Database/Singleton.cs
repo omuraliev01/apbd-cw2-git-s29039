@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using APBD_TASK2.Models;
 
-namespace APBD_TASK2.Database
+namespace APBD_TASK2.Database;
+
+public class Singleton
 {
-    public class Singleton
+    private static Singleton? _instance;
+    public static Singleton Instance
     {
-        private static Singleton? _instance;
-        public static Singleton Instance
+        get
         {
-            get
-            {
-                _instance ??= new Singleton();
-                return _instance;
-            }
+            _instance ??= new Singleton();
+            return _instance;
         }
-
-        private Singleton() { }
-
-        //TODO: add collections for items in the exercise
-        //public List<Class> Class { get; } = new();
     }
+
+    private Singleton() { }
+    
+    public List<Equipment> Equipment { get; } = new();
+    public List<User> Users { get; } = new();
+    public List<Rental> Rentals { get; } = new();
 }
