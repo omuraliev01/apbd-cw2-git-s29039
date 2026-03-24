@@ -1,9 +1,10 @@
-using APBD_Task2.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using APBD_TASK2.Models;
+
 namespace APBD_Task2.Models;
 
 public class Projector : Equipment
